@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:100,400,500,600,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1380px;
+  width: 100%;
+  margin: auto;
+}

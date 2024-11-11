@@ -1,1 +1,38 @@
-<p>register works!</p>
+<button (click)="isDoctor = false">Register as User</button>
+<button (click)="isDoctor = true">Register as Doctor</button>
+
+<form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm)">
+  <!-- Common fields for both User and Doctor -->
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" name="firstName" ngModel required />
+
+  <label for="lastName">Last Name</label>
+  <input type="text" id="lastName" name="lastName" ngModel required />
+
+  <label for="email">E-mail</label>
+  <input type="text" id="email" name="email" ngModel required />
+
+  <label for="privateNumber">Private Number</label>
+  <input type="text" id="privateNumber" name="privateNumber" ngModel required />
+
+  <label for="password">Password</label>
+  <input type="text" id="password" name="password" ngModel required />
+
+  <label for="activationCode">Acitvation Code</label>
+  <input type="text" id="activationCode" name="activationCode" ngModel required />
+
+
+  <!-- Additional fields only for Doctors -->
+  <div *ngIf="isDoctor">
+    <label for="category">Category</label>
+    <input type="text" id="category" name="category" ngModel required />
+
+    <label for="photo">Photo</label>
+    <input type="file" id="photo" name="photo" ngModel />
+
+    <label for="cv">CV</label>
+    <input type="file" id="cv" name="cv" ngModel />
+  </div>
+
+  <button type="submit">Register</button>
+</form>

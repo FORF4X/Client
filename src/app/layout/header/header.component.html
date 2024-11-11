@@ -1,0 +1,78 @@
+<header>
+  <div class="top__header--container">
+    <div class="logo--container">
+      <img ngSrc="../public/logo.png" alt="Logo Inc." height="648" width="1152">
+      <a routerLink="/doctors" routerLinkActive="active">Clinic</a>
+    </div>
+    <nav class="menu--container">
+      <ul class="navigation__menu--container">
+        <li class="navigation__menu--listItem">
+          <a routerLink="/doctors" routerLinkActive="active">Doctors</a>
+        </li>
+        <li class="navigation__menu--listItem">
+          <a routerLink="/">Clinics</a>
+        </li>
+        <li class="navigation__menu--listItem">
+          <a routerLink="/">Annotations</a>
+        </li>
+        <li class="navigation__menu--listItem">
+          <a routerLink="/">Offers</a>
+        </li>
+        <li class="navigation__menu--listItem">
+          <a routerLink="/">Services</a>
+        </li>
+        <li class="navigation__menu--listItem">
+          <a routerLink="/">Medicine</a>
+        </li>
+        <li class="navigation__menu--listItem">
+          <a routerLink="/">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="auth--container">
+      <ul class="auth--containerList">
+        <li>
+          <a routerLink="/login" routerLinkActive="active">Log In</a>
+        </li>
+        <li>
+          <span>/</span>
+        </li>
+        <li>
+          <a routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="language--container">
+      <a routerLink="/" routerLinkActive="active">ENG</a>
+    </div>
+  </div>
+  <div class="bottom__header--container">
+    <div class="info--container">
+      <div class="phone--container">
+        <div class="phone__image--container">
+          <img src="" alt="">
+        </div>
+        <p>032 2 100 100</p>
+      </div>
+
+      <div class="location--container">
+        <div class="location__image--container">
+          <img src="" alt="">
+        </div>
+        <p>Iakob Nikoladze N10</p>
+      </div>
+    </div>
+
+    <div class="search--container">
+      <div class="searchDoctorByName--container">
+        <input type="text" placeholder="Search Doctor By Name">
+      </div>
+
+      <div class="searchDoctorBySpecialty--container">
+        <input type="text" placeholder="Search Doctor By Specialty">
+      </div>
+
+      <button>Search</button>
+    </div>
+  </div>
+</header>
