@@ -1,0 +1,67 @@
+<section>
+  <div class="registration--title">
+    <h1>რეგისტრაცია</h1>
+  </div>
+
+  <div class="choose__role--container">
+    <button (click)="isDoctor = false">Register as Patient</button>
+    <button (click)="isDoctor = true">Register as Doctor</button>
+  </div>
+
+  <div class="wrapper">
+    <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm)">
+      <!-- Common fields for both User and Doctor -->
+      <div class="registration--item">
+        <label for="firstName">სახელი</label>
+        <input type="text" id="firstName" name="firstName" ngModel required placeholder="( მინიმუმ 5 სიმბოლო )"/>
+      </div>
+
+      <div class="registration--item">
+        <label for="lastName">გვარი</label>
+        <input type="text" id="lastName" name="lastName" ngModel required />
+      </div>
+
+      <div class="registration--item">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" ngModel required />
+      </div>
+
+      <div class="registration--item">
+        <label for="privateNumber">პირადი ნომერი</label>
+        <input type="text" id="privateNumber" name="privateNumber" ngModel required placeholder="00000000000"/>
+      </div>
+
+      <div class="registration--item">
+        <label for="password">პაროლი</label>
+        <input type="text" id="password" name="password" ngModel required placeholder="( მინიმუმ 8 სიმბოლო:@7, )"/>
+      </div>
+
+      <div class="registration--item">
+        <label for="activationCode">აქტივაციის კოდი</label>
+        <input type="text" id="activationCode" name="activationCode" ngModel required />
+      </div>
+
+      <!-- Additional fields only for Doctors -->
+      <div class="registration__doctor--items" *ngIf="isDoctor">
+        <div class="registration--item">
+          <label for="category">კატეგორია</label>
+          <input type="text" id="category" name="category" ngModel required placeholder="ანესთეზიოლოგი / თერაპევტი ან სხვა..."/>
+        </div>
+
+        <div class="registration--item">
+          <label for="photo">ფოტოსურათი</label>
+          <input type="file" id="photo" (change)="onFileChange($event, 'photo')" />
+        </div>
+
+        <div class="registration--item">
+          <label for="cv">CV</label>
+          <input type="file" id="cv" (change)="onFileChange($event, 'cv')" />
+        </div>
+      </div>
+
+      <div class="registration__button--container">
+        <button type="submit">რეგისტრაცია</button>
+      </div>
+    </form>
+  </div>
+</section>

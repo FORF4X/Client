@@ -1,0 +1,31 @@
+
+
+<div class="calendar-container">
+  <div class="month-selector">
+    <button (click)="loadPreviousMonth()">&#8592;</button>
+    <span>{{ currentMonth | date: 'MMMM' }}</span>
+    <button (click)="loadNextMonth()">&#8594;</button>
+    <span>{{ currentMonth | date: 'yyy' }}</span>
+  </div>
+  <div class="header">
+    <button (click)="loadPreviousWeek()">&#8592;</button>
+    <button (click)="loadNextWeek()">&#8594;</button>
+    <div *ngFor="let day of weekDays" class="week-days">
+      {{ day.date | date: 'dd(EEE)' }}
+    </div>
+  </div>
+  <div class="body">
+    <div class="time-column">
+      <div *ngFor="let time of timeSlots" class="time-slot">
+        <p>{{ time }}</p>
+      </div>
+    </div>
+    <div class="day-columns">
+      <div *ngFor="let day of weekDays" class="day-column">
+        <div *ngFor="let time of timeSlots" class="day-cell">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

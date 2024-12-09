@@ -1,0 +1,81 @@
+section {
+  max-width: 1400px;
+  width: 100%;
+  margin: auto;
+
+  .registration--title {
+    padding-top: 4rem;
+
+    h1 {
+      font-size: 26px;
+      font-weight: 400;
+      color: #18A4E1;
+    }
+  }
+  .choose__role--container {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+
+    button {
+      border-radius: 25px;
+      padding: .50rem .75rem;
+      background-color: #F0FAFF;
+      border: none;
+      color: #053354;
+    }
+  }
+
+  .wrapper {
+    padding-top: 2rem;
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2.5rem;
+      align-items: start;
+
+      .registration--item {
+        display: flex;
+        flex-direction: column;
+
+
+        label {
+          font-size: 16px;
+          color: #053354;
+          padding: 0.5rem 1.25rem;
+        }
+
+        input {
+          border-radius: 50px;
+          border: 1px solid #ECF2F8;
+          padding: 1rem 1.25rem;
+        }
+      }
+
+      .registration__doctor--items {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2.5rem;
+      }
+
+      .registration__button--container {
+        grid-column: 3;
+        justify-self: end;
+        align-self: start;
+        padding-top: 0;
+
+        button {
+          width: 180px;
+          background-color: #053354;
+          border: none;
+          border-radius: 50px;
+          color: #ffffff;
+          padding: 0.75rem 1.25rem;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

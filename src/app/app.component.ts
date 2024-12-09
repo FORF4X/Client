@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { DoctorListComponent } from './doctor/doctor-list/doctor-list.component';
+import { DoctorListComponent } from './features/doctor/doctor-list/doctor-list.component';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import {AuthService} from "./services/auth.service";
-import {HeaderComponent} from "./layout/header/header.component";
-import {FooterComponent} from "./layout/footer/footer.component";
+import {AuthService} from "./core/auth.service";
+import {LayoutComponent} from "./shared/layout/layout.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [DoctorListComponent, RouterModule, HeaderComponent, FooterComponent],
+  imports: [DoctorListComponent, RouterModule, LayoutComponent],
 })
 export class AppComponent {
   constructor(public authService: AuthService) {}

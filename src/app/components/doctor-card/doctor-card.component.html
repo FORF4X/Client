@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <div class="top--details">
+    <div class="views">
+      <img src="./assets/eye.png" alt="views">
+      <p>123907</p>
+    </div>
+    <div class="pin">
+      <img src="./assets/pin.png" alt="pin">
+    </div>
+  </div>
+  <div class="picture--container">
+    <img *ngIf="doctor?.photo" [src]="'data:image/jpeg;base64,' + doctor.photo" alt="Doctor Photo">
+<!--    <img src="./assets/doctor-man.jpeg" alt="">-->
+  </div>
+  <div class="doctor--name">
+    <h2>{{ doctor.firstName }} {{ doctor.lastName }}</h2>
+  </div>
+  <div class="doctor--category">
+    <p>კარდიოლოგი / არითმოლოგი</p>
+  </div>
+  <div class="rating--stars">
+<!--    <img *ngFor="let star of [1, 2, 3, 4, 5]" src="./assets/star.png" alt="star">-->
+    <img src="./assets/star.png" alt="">
+    <img src="./assets/star.png" alt="">
+    <img src="./assets/star.png" alt="">
+    <img src="./assets/star.png" alt="">
+    <img src="./assets/star.png" alt="">
+  </div>
+  <div class="button--container">
+    <a href="#">მიღებაზე ჩაწერა</a>
+    <h1>></h1>
+  </div>
+</div>

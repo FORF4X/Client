@@ -1,0 +1,11 @@
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #FF2C52;
+}
+
+p {
+  text-align: center;
+}

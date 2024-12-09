@@ -1,0 +1,34 @@
+footer {
+  margin-top: 7rem;
+  background-color: #053354;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  color: #ffffff;
+  height: 25vh;
+
+  .footer--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+    padding: 1.25rem 0;
+
+    .logo--footer {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo--footer img {
+      width: 90px;
+      height: 66px;
+      object-fit: cover;
+    }
+
+    .logo--footer h2 {
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+
+}

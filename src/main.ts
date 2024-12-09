@@ -3,7 +3,7 @@ import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 import { provideHttpClient, withInterceptors } from "@angular/common/http";
-import { jwtInterceptor } from './app/auth/ jwt.interceptor';
+import { jwtInterceptor } from './app/core/ jwt.interceptor';
 
 
 
